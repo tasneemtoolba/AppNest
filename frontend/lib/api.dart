@@ -38,11 +38,10 @@ class API {
     }
   }
 
-  //// http://localhost:5104/Scores/s?searchQuery=s&limit=2
+  // http://localhost:5104/Scores/string?limit=2
 
   Future<List<ScoreModel>> getScores(String query, int? limit) async {
-    var url =
-        '$baseUrl/Scores/$query?searchQuery=$query'; // Replace with your API endpoint
+    var url = '$baseUrl/Scores/$query?'; // Replace with your API endpoint
     if (limit != null) {
       url += "&limit=$limit";
     }
@@ -55,6 +54,23 @@ class API {
     if (response.statusCode == 200) {
       final List<dynamic> productsJson = response.data;
       return productsJson.map((json) => ScoreModel.fromJson(json)).toList();
+    } else {
+      throw Exception('Failed to load scores');
+    }
+  }
+
+////http://localhost:5104/Deals/by-product/string
+  Future<List<DealModel>> getDealsByProductId(String productId) async {
+    var url =
+        '$baseUrl/Deals/by-product/$productId'; // Replace with your API endpoint
+
+    final response = await dio.get(url);
+    print("response.data");
+    print(response.statusCode);
+    print(response.data);
+    if (response.statusCode == 200) {
+      final List<dynamic> dealsJson = response.data;
+      return dealsJson.map((json) => DealModel.fromJson(json)).toList();
     } else {
       throw Exception('Failed to load scores');
     }

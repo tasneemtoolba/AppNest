@@ -1,5 +1,6 @@
 import 'package:appnest/api.dart';
 import 'package:appnest/domain/product_model.dart';
+import 'package:appnest/presentation/view_product.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
@@ -81,7 +82,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                               productName: productName.text,
                                               regularPrice:
                                                   double.parse(price.text),
-                                              productId: const Uuid().v1());
+                                              id: const Uuid().v1());
                                           Navigator.of(context).pop();
                                           await API().getProducts();
                                           await API().addProduct(product);
@@ -111,7 +112,14 @@ class _ProductsScreenState extends State<ProductsScreen> {
                       itemBuilder: (context, index) {
                         print("products in future : ${snapshot.data}");
                         return ListTile(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      ViewProduct(product: products[index])),
+                            );
+                          },
                           title: Text(products[index].productName),
                           subtitle:
                               const Text('click here to add/remove deals'),

@@ -8,19 +8,19 @@ ProductModel productModelFromJson(String str) =>
 String productModelToJson(ProductModel data) => json.encode(data.toJson());
 
 class ProductModel {
-  String productId;
+  String id;
   String productName;
   double regularPrice;
   List<DealModel>? deals;
   ProductModel({
-    required this.productId,
+    required this.id,
     required this.productName,
     required this.regularPrice,
     this.deals,
   });
 
   factory ProductModel.fromJson(Map<String, dynamic> json) => ProductModel(
-        productId: json["id"],
+        id: json["id"],
         productName: json["name"],
         regularPrice: json["price"],
         deals: json["deals"] == null
@@ -30,7 +30,7 @@ class ProductModel {
       );
 
   Map<String, dynamic> toJson() => {
-        "id": productId,
+        "id": id,
         "name": productName,
         "price": regularPrice,
         "deals": deals == null

@@ -11,23 +11,23 @@ String dealModelToJson(DealModel data) => json.encode(data.toJson());
 class DealModel {
   String dealId;
   String productId;
-  double dealPercentage;
+  double discount_percentage;
 
   DealModel({
     required this.dealId,
     required this.productId,
-    required this.dealPercentage,
+    required this.discount_percentage,
   });
 
   factory DealModel.fromJson(Map<String, dynamic> json) => DealModel(
         dealId: json["id"],
-        productId: json["Productid"],
-        dealPercentage: json["deal_percentage"]?.toDouble(),
+        productId: json["productid"],
+        discount_percentage: json["discount_percentage"]?.toDouble(),
       );
 
   Map<String, dynamic> toJson() => {
         "id": dealId,
-        "Productid": productId,
-        "deal_percentage": dealPercentage,
+        "productid": productId,
+        "discount_percentage": discount_percentage,
       };
 }
