@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xLcrKM/LWLYIV0qRYyZXJi3gaw9lby1KpM4IDgX1+wUyXGqnMQsLGVd2K1n+T1To28dWyno8KRabWEinYG98Wg==",
+  "dgSpecHash": "7g+bBXO0fn2n2ehTknjYCPu3d7TTmFBtnJusW4zf/PcGuj4IuMH/DydoP+UPEUbhQsUA/3V3DEDAlo7HB/xUYg==",
   "success": true,
-  "projectFilePath": "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/DealsApp/DealsApp.csproj",
+  "projectFilePath": "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/backend/DealsApp.csproj",
   "expectedPackageFiles": [
     "/Users/tasneemtoolba/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/tasneemtoolba/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",

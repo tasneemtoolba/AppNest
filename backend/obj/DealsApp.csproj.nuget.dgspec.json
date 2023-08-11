@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/DealsApp/DealsApp.csproj": {}
+    "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/backend/DealsApp.csproj": {}
   },
   "projects": {
-    "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/DealsApp/DealsApp.csproj": {
+    "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/backend/DealsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/DealsApp/DealsApp.csproj",
+        "projectUniqueName": "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/backend/DealsApp.csproj",
         "projectName": "DealsApp",
-        "projectPath": "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/DealsApp/DealsApp.csproj",
+        "projectPath": "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/backend/DealsApp.csproj",
         "packagesPath": "/Users/tasneemtoolba/.nuget/packages/",
-        "outputPath": "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/DealsApp/obj/",
+        "outputPath": "/Users/tasneemtoolba/Desktop/projects/Fullstack/work/appnest test task/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tasneemtoolba/.nuget/NuGet/NuGet.Config"

@@ -36,6 +36,22 @@ public class DealsController : ControllerBase
         return dealInstance;
     }
 
+    // GET: Deals/
+    [HttpGet("by-product/{productId}")]
+    public async Task<ActionResult<IEnumerable<Deal>>> GetDealsByProductId(String productId)
+    {
+        var deals = await _context.Deals.Where(deal => deal.Productid == productId).ToListAsync();
+
+        if (deals == null )
+        {
+            return NotFound();
+        }
+        else if( deals.Count == 0){
+            return Ok(new List<Deal>()); // Return an empty list
+        }
+
+        return deals;
+    }
     // POST: Deals
     [HttpPost]
     public async Task<ActionResult<Deal>> PostDeal(Deal dealIinstance)

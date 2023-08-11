@@ -23,8 +23,8 @@ public class ScoresController : ControllerBase
     }
 
 
-    [HttpGet("{search}")]
-        public  List<Score> GetScores([FromQuery] String searchQuery,  [FromQuery] int? limit){
+    [HttpGet("{searchQuery}")]
+        public  List<Score> GetScores( String searchQuery,  [FromQuery] int? limit){
         var filteredResults = _context.Scores.Where(score => score.product_name.Contains(searchQuery)).OrderByDescending(e=>e.score_value);
         if(limit != null){
             return filteredResults.Take((int)limit).ToList();
